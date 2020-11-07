@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
 
@@ -23,18 +24,31 @@ namespace Pomodoro
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer _timer;
+        TimeSpan _time;
+
         public MainWindow()
         {
             InitializeComponent();
-            Counter.Text = "00:25";
-            Task.Delay(10000000).ContinueWith(_ =>
-            {
-                showNotification();
-            });
             
+             
+            _time = TimeSpan.FromSeconds(5);
 
+            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                Counter.Text = _time.ToString("c");
+                if (_time == TimeSpan.Zero)
+                {
+                    _timer.Stop();
+                    showNotification();
+                }
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+            }, Application.Current.Dispatcher);
 
+            _timer.Start();
         }
+
+    
 
         public void showNotification()
         {
