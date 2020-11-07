@@ -30,7 +30,7 @@ namespace Pomodoro
         public MainWindow()
         {
             InitializeComponent();
-       
+
         }
 
 
@@ -47,7 +47,7 @@ namespace Pomodoro
 
         public void startTimer(object sender, RoutedEventArgs e)
         {
-            _time = TimeSpan.FromSeconds(10);
+            _time = TimeSpan.FromHours(2);
 
             _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
@@ -61,6 +61,11 @@ namespace Pomodoro
             }, Application.Current.Dispatcher);
 
             _timer.Start();
+        }
+
+        public void stopTimer(object sender, RoutedEventArgs e)
+        {
+            _timer.Stop();
         }
     }
 }
