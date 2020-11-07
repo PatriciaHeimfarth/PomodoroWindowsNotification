@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "8PUEh6Ko6dkSJV3hvAsguOdqZVhlX69jCdmmz8hchImyy91HblzAxf2SUKUi0raln0pRl4jUSVs+x3jAsNprbw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bratwurst\\source\\repos\\Pomodoro\\Pomodoro.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\microsoft.toolkit.uwp.notifications\\6.1.1\\microsoft.toolkit.uwp.notifications.6.1.1.nupkg.sha512",
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\microsoft.ui.xaml\\2.4.3\\microsoft.ui.xaml.2.4.3.nupkg.sha512",
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.17763.1000\\microsoft.windows.sdk.contracts.10.0.17763.1000.nupkg.sha512",
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\microsoft.windows.winmd\\1.0.191022.1\\microsoft.windows.winmd.1.0.191022.1.nupkg.sha512",
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\system.runtime.windowsruntime.4.6.0.nupkg.sha512",
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512",
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Bratwurst\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
