@@ -7,8 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox Name="Counter" FontSize="50">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+ 
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
             
-        </TextBox>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Column="0" Name="Counter" FontSize="50"></TextBox>
+        <Button Name="Start" Grid.Column="0" Grid.Row="1">Start Countdown</Button>
+        <Button Name="Stop" Grid.Column="1" Grid.Row="1">Stop Countdown</Button>
+        
     </Grid>
 </Window>
