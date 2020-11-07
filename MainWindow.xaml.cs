@@ -30,27 +30,12 @@ namespace Pomodoro
         public MainWindow()
         {
             InitializeComponent();
-            
-             
-            _time = TimeSpan.FromSeconds(5);
-
-            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
-            {
-                Counter.Text = _time.ToString("c");
-                if (_time == TimeSpan.Zero)
-                {
-                    _timer.Stop();
-                    
-                }
-                _time = _time.Add(TimeSpan.FromSeconds(-1));
-            }, Application.Current.Dispatcher);
-
-            _timer.Start();
+       
         }
 
-    
 
-        public void showNotification(Object sender, RoutedEventArgs e)
+
+        public void showNotification()
         {
             var message = "Pomodoro Pause!";
             var xml = $"<?xml version=\"1.0\"?><toast><visual><binding template=\"ToastText02\"><text id=\"1\">{message}</text></binding></visual></toast>";
@@ -58,6 +43,24 @@ namespace Pomodoro
             toastXml.LoadXml(xml);
             var toast = new ToastNotification(toastXml);
             ToastNotificationManager.CreateToastNotifier("Pomodoro Pause!").Show(toast);
+        }
+
+        public void startTimer(object sender, RoutedEventArgs e)
+        {
+            _time = TimeSpan.FromSeconds(10);
+
+            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                Counter.Text = _time.ToString("c");
+                if (_time == TimeSpan.Zero)
+                {
+                    _timer.Stop();
+                    showNotification();
+                }
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+            }, Application.Current.Dispatcher);
+
+            _timer.Start();
         }
     }
 }
