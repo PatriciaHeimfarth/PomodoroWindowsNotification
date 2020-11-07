@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Pomodoro"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="Black">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
@@ -19,9 +19,9 @@
             
         </Grid.RowDefinitions>
 
-        <TextBox Grid.Column="0" Name="Counter" FontSize="50"></TextBox>
-        <Button Name="Start" Grid.Column="0" Grid.Row="1">Start Countdown</Button>
-        <Button Name="Stop" Grid.Column="1" Grid.Row="1">Stop Countdown</Button>
+        <TextBox Background="Black" Foreground="LightPink" Grid.Column="0" Name="Counter" FontSize="50"></TextBox>
+        <Button Name="Start" Background="LightBlue" Grid.Column="0" Grid.Row="1">Start Countdown</Button>
+        <Button Name="Stop" Background="LightPink" Grid.Column="1" Grid.Row="1">Stop Countdown</Button>
         
     </Grid>
 </Window>
