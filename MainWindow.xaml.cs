@@ -26,7 +26,8 @@ namespace Pomodoro
         public MainWindow()
         {
             InitializeComponent();
-            Task.Delay(10000).ContinueWith(_ =>
+            Counter.Text = "00:25";
+            Task.Delay(10000000).ContinueWith(_ =>
             {
                 showNotification();
             });
@@ -38,7 +39,7 @@ namespace Pomodoro
         public void showNotification()
         {
             var message = "Pomodoro Pause!";
-            var xml = $"<?xml version=\"1.0\"?><toast><visual><binding template=\"ToastText01\"><text id=\"1\">{message}</text></binding></visual></toast>";
+            var xml = $"<?xml version=\"1.0\"?><toast><visual><binding template=\"ToastText02\"><text id=\"1\">{message}</text></binding></visual></toast>";
             var toastXml = new XmlDocument();
             toastXml.LoadXml(xml);
             var toast = new ToastNotification(toastXml);
