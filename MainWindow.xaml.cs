@@ -40,7 +40,7 @@ namespace Pomodoro
                 if (_time == TimeSpan.Zero)
                 {
                     _timer.Stop();
-                    showNotification();
+                    
                 }
                 _time = _time.Add(TimeSpan.FromSeconds(-1));
             }, Application.Current.Dispatcher);
@@ -50,7 +50,7 @@ namespace Pomodoro
 
     
 
-        public void showNotification()
+        public void showNotification(Object sender, RoutedEventArgs e)
         {
             var message = "Pomodoro Pause!";
             var xml = $"<?xml version=\"1.0\"?><toast><visual><binding template=\"ToastText02\"><text id=\"1\">{message}</text></binding></visual></toast>";

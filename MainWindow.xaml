@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
 
         <TextBox Background="Black" Foreground="LightPink" Grid.Column="0" Name="Counter" FontSize="50"></TextBox>
-        <Button Name="Start" Background="LightBlue" Grid.Column="0" Grid.Row="1">Start Countdown</Button>
+        <Button Name="Start" Background="LightBlue" Grid.Column="0" Grid.Row="1" Click="showNotification">Start Countdown</Button>
         <Button Name="Stop" Background="LightPink" Grid.Column="1" Grid.Row="1">Stop Countdown</Button>
         
     </Grid>
